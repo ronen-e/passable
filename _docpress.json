@@ -27,6 +27,12 @@
         ],
         "sections": [
           {
+            "title": "Live demo",
+            "source": "README.md",
+            "url": "index.html",
+            "slug": "index-2"
+          },
+          {
             "title": "Getting Started",
             "sections": [
               {
@@ -474,28 +480,9 @@
   "index": {
     "index.html": {
       "source": "README.md",
-      "title": "PASSABLE",
-      "pageTitle": "PASSABLE",
-      "slug": "index",
-      "headings": [
-        {
-          "title": "Key Benefits",
-          "depth": 2,
-          "id": "key-benefits",
-          "headings": [
-            {
-              "title": "Structured Validations",
-              "depth": 3,
-              "id": "structured-validations"
-            },
-            {
-              "title": "Isomorphic Validations",
-              "depth": 3,
-              "id": "isomorphic-validations"
-            }
-          ]
-        }
-      ]
+      "title": "Live demo - PASSABLE",
+      "pageTitle": "Live demo",
+      "slug": "index-2"
     },
     "getting_started/installation.html": {
       "source": "docs/getting_started/installation.md",

@@ -1,0 +1,133 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Volumes/fiverr_dev/passable',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/evyatar.alush/.npm/passable/5.7.2/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/evyatar.alush/.npm correctMkdir not in flight; initializing
+10 info lifecycle passable@5.7.2~prepublish: passable@5.7.2
+11 silly lifecycle passable@5.7.2~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/evyatar.alush/.npm/passable/5.7.2/package.tgz',
+12 verbose tar pack   '/Volumes/fiverr_dev/passable' ]
+13 verbose tarball /Users/evyatar.alush/.npm/passable/5.7.2/package.tgz
+14 verbose folder /Volumes/fiverr_dev/passable
+15 verbose addLocalTarball adding from inside cache /Users/evyatar.alush/.npm/passable/5.7.2/package.tgz
+16 verbose correctMkdir /Users/evyatar.alush/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd passable@5.7.2
+18 verbose afterAdd /Users/evyatar.alush/.npm/passable/5.7.2/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/evyatar.alush/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/evyatar.alush/.npm/passable/5.7.2/package/package.json written
+21 silly publish { name: 'passable',
+21 silly publish   version: '5.7.2',
+21 silly publish   description: 'Isomorphic Data Model Validations',
+21 silly publish   main: './dist/Passable.min.js',
+21 silly publish   author: { name: 'Evyatar', email: 'evyatar.a@fiverr.com' },
+21 silly publish   license: 'MIT',
+21 silly publish   scripts:
+21 silly publish    { build: 'WEBPACK_ENV=build webpack',
+21 silly publish      'build:watch': 'webpack --watch',
+21 silly publish      dev: 'WEBPACK_ENV=dev webpack --progress --colors --watch',
+21 silly publish      'test:custom': 'mocha --compilers js:babel-core/register --colors -w \'./src/**/*custom.spec.js\'',
+21 silly publish      'test:global_custom': 'mocha --compilers js:babel-core/register --colors -w \'./src/spec/passable.api.global-custom.spec.js\'',
+21 silly publish      'test:enforce': 'mocha --compilers js:babel-core/register --colors -w \'./src/enforce/spec.js\'',
+21 silly publish      'test:pass_runner': 'mocha --compilers js:babel-core/register --colors -w \'./src/pass_runner/spec.js\'',
+21 silly publish      'test:watch': 'mocha --compilers js:babel-core/register --colors -w \'./src/**/*spec.js\'',
+21 silly publish      test: 'mocha --compilers js:babel-core/register --colors \'./src/**/*spec.js\'',
+21 silly publish      eslint: 'eslint -c .eslintrc \'./src/**/*.js\'; exit 0' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/ealush/passable.git' },
+21 silly publish   bugs: { url: 'https://github.com/ealush/passable/issues' },
+21 silly publish   homepage: 'https://github.com/ealush/passable#readme',
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-cli': '^6.24.1',
+21 silly publish      'babel-core': '^6.25.0',
+21 silly publish      'babel-loader': '^7.1.0',
+21 silly publish      'babel-plugin-add-module-exports': '^0.2.1',
+21 silly publish      'babel-plugin-transform-class-properties': '^6.24.1',
+21 silly publish      'babel-preset-es2015': '^6.24.1',
+21 silly publish      'babel-preset-flow': '^6.23.0',
+21 silly publish      chai: '^4.0.2',
+21 silly publish      docpress: '0.7.1',
+21 silly publish      eslint: '^4.1.1',
+21 silly publish      'eslint-loader': '^ 1.8.0',
+21 silly publish      'eslint-plugin-flowtype': '^2.34.0',
+21 silly publish      'flow-bin': '^0.48.0',
+21 silly publish      mocha: '^3.4.2',
+21 silly publish      webpack: '^3.0.0',
+21 silly publish      'window-or-global': '^1.0.1' },
+21 silly publish   readme: 'PASSABLE\n========\n\nIsomorphic data model validations made easy.\n\n[![npm version](https://badge.fury.io/js/passable.svg)](https://badge.fury.io/js/passable) [![Build Status](https://travis-ci.org/ealush/passable.svg?branch=master)](https://travis-ci.org/ealush/passable) [![bitHound Overall Score](https://www.bithound.io/github/ealush/passable/badges/score.svg)](https://www.bithound.io/github/ealush/passable)\n\n## Learn more at:\n* [Documentation](https://ealush.github.io/passable/)\n* [Try it live](https://ealush.github.io/passable/try)\n\n# What is Passable\nPassable is a system for javascript applications that allows you to write structured data model validations in a way that\'s consistent all accross your app, and fully reusable.\n\nInspired by the world of unit testing, Passable validations are written like actual specs that need to be passed, and are considered to be an enforceable contract between the backend and the client. The syntax is very similar, adapted to be more suitable for testing data model, and runs in production code - not in testing environment.\n\n![alt tag](https://raw.githubusercontent.com/ealush/passable/gh-pages/passable_diagram.png)\n\n## Key Benefits\n### Structured Validations\n\nThe basic notion behind Passable is that you would want to structure your data model validation in your application, in a way that\'s consistent and easy to follow. It isn\'t much of a problem in a smaller scale application, but as the application gets larger, and more complex, it gets harder to keep track of the different flows of the application and the ways data model validations are performed in each one. Passable gives you a consistent structure to construct your data model validations, in a way that\'s both reusable and easy to read.\n\n### Isomorphic Validations\n\nThe other use of Passable is server side validations. Since most of the times we perform validations, we send the data back to the server, we would like to perform the tests there as well. This causes a great deal of confusion and error. It is hard to keep the validations in the server and the client synced, so if we update a validation in the client side, or the server, it is easy to neglet and change it on the other side as well. Even if we do keep them up to date, it is easy, especially if the server and the client are written in different languages, to have a slightly different interpertation of the logic on each end, whic, eventually, causes inconsistencies and bugs.\n\nInstead, with Passable, you could just as easily set up a data model validations server that would run the same exact validation code that runs in the browser. No duplication, no sync problems.\n\n [Here is an example server](https://github.com/ealush/passable-server) running Passable, both as  a file server, and as a validations server.',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '68f2c2f7abc36f65a600bb9dbe293ddab86b1efa',
+21 silly publish   _id: 'passable@5.7.2',
+21 silly publish   _shasum: 'a77ffa4ccb7eb33ca5a850d3e711779fd9568768',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name passable
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'passable',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'passable',
+26 silly mapToRegistry   name: 'passable',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/passable
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/evyatar.alush/.npm/passable/5.7.2/package.tgz
+30 verbose request uri https://registry.npmjs.org/passable
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 12:21:15 AM
+33 verbose request using bearer token for auth
+34 verbose request id 00554756974222e7
+35 http request PUT https://registry.npmjs.org/passable
+36 http 403 https://registry.npmjs.org/passable
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Wed, 26 Jul 2017 21:21:17 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-mad9430-MAD',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1501104076.456004,VS0,VE1353',
+37 verbose headers   vary: 'Accept-Encoding, Accept' }
+38 verbose request invalidating /Users/evyatar.alush/.npm/registry.npmjs.org/passable on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 5.7.2." : passable
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid passable
+43 verbose cwd /Volumes/fiverr_dev/passable
+44 error Darwin 16.5.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.11.0
+47 error npm  v3.10.10
+48 error code E403
+49 error "You cannot publish over the previously published version 5.7.2." : passable
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
